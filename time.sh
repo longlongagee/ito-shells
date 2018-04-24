@@ -25,9 +25,3 @@ ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ntpdate 182.92.12.11 && hwclock -w 
 
 
-fsdjfi
-
-asdasdasda
-asdasdasdasdasd
-asdasd
-asdasdasd
