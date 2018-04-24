@@ -27,7 +27,7 @@ ntpdate 182.92.12.11 && hwclock -w
 
 fsdjfi
 
-asd
-asd
+asdasd
+asdasdasdasdasd
 
-asd
+asdasdasd
