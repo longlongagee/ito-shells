@@ -1,0 +1,133 @@
+A.serverGmcc157()
+pccStartHere123#@!
+pccStartHere@01@
+HanteleGmcc1234!
+thinker@123@
+mysql -uroot -pHuajing@123#
+Admin WorkGmcc1234!
+P@ssw0rd
+Id_toolbar00#
+Dmp&cmcc2017
+Navi@richstoneDT
+
+10.243.167.3
+IP-GD-SGS
+grep -c $ '\t'499 ./host.access.log.20180116*
+
+Hantele@1234!
+
+push.username=hivedata
+push.password=qwe123QWE!@#
+push.ip=221.179.47.54
+1qaz!QAZ
+
+{
+	"request_id": "1234567899996",
+	"adslot": {
+		"sequence_id": null,
+		"width": 600.0,
+		"height": 500.0,
+		"adslot_type": null,
+		"user_agent": "",
+		"referer": "",
+		"url": null
+	},
+	"app": {
+		"app_id": null,
+		"app_category": null,
+		"app_bundle_id": null,
+		"action_type": null
+	},
+	"device": {
+		"brand": null,
+		"os": null,
+		"os_version": null,
+		"screen_width": null,
+		"screen_height": null,
+		"network_type": null,
+		"carrier_id": null,
+		"msisdn": "8615018702058",
+		"imei": null,
+		"idfa": null,
+		"mac": null,
+		"openudid": null,
+		"region": null
+	},
+	"user": {
+		"gender": null,
+		"ip": null,
+		"user_id": null,
+		"latitude": null,
+		"longtitude": null
+	},
+	"ext": null,
+	"adid": null,
+	"adids": null,
+	"flow_type": null
+}
+
+[root@Toolbar01 rtb]# ab -n1000 -c1000 -T 'Content-Type:text/html' -p test.json https://10.251.116.61:8443/smartpush-cmgddr-rtb-rs/channelrtb/biding?caller=toolbar
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 10.251.116.61 (be patient)
+Completed 1000 requests
+Completed 2000 requests
+Completed 3000 requests
+Completed 4000 requests
+Completed 5000 requests
+Completed 6000 requests
+Completed 7000 requests
+Completed 8000 requests
+Completed 9000 requests
+Completed 10000 requests
+Finished 10000 requests
+
+
+Server Software:        GWS/9.00.9
+Server Hostname:        10.251.116.61
+Server Port:            8443
+SSL/TLS Protocol:       TLSv1/SSLv3,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+
+Document Path:          /smartpush-cmgddr-rtb-rs/channelrtb/biding?caller=toolbar
+Document Length:        1048 bytes
+
+Concurrency Level:      500
+Time taken for tests:   52.019 seconds
+Complete requests:      10000
+Failed requests:        0
+Write errors:           0
+Non-2xx responses:      10254
+Total transferred:      14806776 bytes
+Total POSTed:           7668880
+HTML transferred:       10746192 bytes
+Requests per second:    292.24 [#/sec] (mean)
+Time per request:       2600.970 [ms] (mean)
+Time per request:       5.202 [ms] (mean, across all concurrent requests)
+Transfer rate:          277.97 [Kbytes/sec] received
+                        143.97 kb/s sent
+                        421.94 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       26 1770 574.1   1994    2915
+Processing:    38  756 578.9    589    2423
+Waiting:       13  534 471.9    341    2391
+Total:         64 2526 229.2   2497    4566
+
+Percentage of the requests served within a certain time (ms)
+  50%   2497
+  66%   2510
+  75%   2519
+  80%   2532
+  90%   2606
+  95%   2790
+  98%   3111
+  99%   3957
+ 100%   4566 (longest request)
+ 
+echo `date  +"%Y-%m-%d %H:%M:%S"`::`curl -w %{time_namelookup}::%{time_connect}::%{time_starttransfer}::%{time_total}::%{speed_download}"\n" -H "Content-Type: application/json" -X POST  --data '{"request_id":"12232323","adslot":{"sequence_id":1,"width":620,"height":120,"adslot_type":"1","user_agent":"Mozilla5.0"},"app":{"app_id":"123","app_category":"","app_bundle_id":"123","action_type":"1"},"device":{"brand":"apple","os":"1","os_version":"10.1","screen_width":320,"screen_height":80,"network_type":"4","carrier_id":"1","msisdn":"8618826331104","imei":"123123","idfa":"123123","mac":"1234-1234-1234-1234","openudid":"123"},"user":{"gender":"1","ip":"10.9.1.1","user_id":"123","latitude":"113.2","longitude":"23.11"},"ext":""}' https://10.251.116.61:8443/smartpush-cmgddr-rtb-rs/channelrtb/biding?caller=toolbar -k`
+
+curl -l -H "Content-type: application/json" -X POST -d '{"request_id":"12232323","adslot":{"sequence_id":1,"width":620,"height":120,"adslot_type":"1","user_agent":"Mozilla5.0"},"app":{"app_id":"123","app_category":"","app_bundle_id":"123","action_type":"1"},"device":{"brand":"apple","os":"1","os_version":"10.1","screen_width":320,"screen_height":80,"network_type":"4","carrier_id":"1","msisdn":"8618826331104","imei":"123123","idfa":"123123","mac":"1234-1234-1234-1234","openudid":"123"},"user":{"gender":"1","ip":"10.9.1.1","user_id":"123","latitude":"113.2","longitude":"23.11"},"ext":""}'  https://10.251.116.61:8443/smartpush-cmgddr-rtb-rs/channelrtb/biding?caller=toolbar -k
+

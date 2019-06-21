@@ -1,0 +1,7 @@
+[nexus_epel]
+name=Extra Packages for Enterprise Linux $releasever - $basearch
+baseurl=http://192.168.108.1:8081/repository/yum-group/epel/$releasever/$basearch
+failovermethod=priority
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-$releasever

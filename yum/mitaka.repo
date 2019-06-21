@@ -1,0 +1,11 @@
+[rdo-mitaka-testing]
+name=rdo-mitaka-testing
+baseurl=http://cbs.centos.org/repos/cloud7-openstack-mitaka-testing/x86_64/os/
+enabled=1
+gpgcheck=0
+
+[rdo-common-testing]
+name=rdo-common-testing
+baseurl=http://cbs.centos.org/repos/cloud7-openstack-common-testing/x86_64/os/
+enabled=1
+gpgcheck=0

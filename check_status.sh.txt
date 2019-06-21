@@ -1,0 +1,22 @@
+#!/bin/bash
+log_dir='/home/dba2bar/check_status'
+tdate=`date +%Y%m%d`
+ldate=`date +%d`
+touch $log_dir/$tdate
+echo "$date 服务器巡检情况" >> $log_dir/$tdate
+echo "-----------------------------------" >> $log_dir/$tdate
+echo "-----------1.CPU-----------" >> $log_dir/$tdate
+sar -u -f /var/log/sa/sa$ldate |head -n 3 >> $log_dir/$tdate
+sar -u -f /var/log/sa/sa$ldate |tail -n 1 >> $log_dir/$tdate
+echo "-----------2.MEM-----------" >> $log_dir/$tdate
+free -m |grep "buffers" |awk 'NR==2{print$3/($3+$4)*100}'|cut -c -5 >> $log_dir/$tdate
+echo "-----------3.DSK-----------" >> $log_dir/$tdate
+df -h >> $log_dir/$tdate
+echo "-----------4.INTER-----------" >> $log_dir/$tdate
+sar -n DEV  -f /var/log/sa/sa$ldate |head -n 3|awk '{print $1,$2,$5,$6}' >> $log_dir/$tdate
+sar -n DEV  -f /var/log/sa/sa$ldate |awk '/bond0/{print $1,$2,$5,$6}'|tail -n 1 >> $log_dir/$tdate
+echo "-----------5.LOAD-----------" >> $log_dir/$tdate
+sar -q  -f /var/log/sa/sa$ldate |head -n 3 >> $log_dir/$tdate
+sar -q  -f /var/log/sa/sa$ldate |tail -n 1 >> $log_dir/$tdate
+echo "-----------6.TOP-----------" >> $log_dir/$tdate
+top -b -n 2|head -25 >> $log_dir/$tdate

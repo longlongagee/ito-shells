@@ -1,0 +1,52 @@
+user root;
+worker_processes 1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    upstream grafana {
+        server 127.0.0.1:3000;
+    }
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+		proxy_pass http://grafana/;
+        }
+	
+	location /zabbix {
+	rewrite ^/(.*) http://192.168.6.38/index.php;
+       }
+        
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root html;
+        }
+        location ~ \.php$ {
+        root /var/www/html/zabbix;
+        index index.php;
+              try_files $uri =404;
+              fastcgi_pass 127.0.0.1:9000;
+              fastcgi_index index.php;
+              fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+              include fastcgi_params;
+        }
+ location ~ /styles/.*\.(css)$
+        {
+	root /var/www/html/zabbix;
+       }
+	
+       location /img/
+        {
+        root /var/www/html/zabbix;
+       }
+        location ~ /js/.*\.(js)$
+        {
+        root /var/www/html/zabbix/;
+        }
+    }
+}
